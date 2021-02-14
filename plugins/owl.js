@@ -1,0 +1,1 @@
+import '~/assets/js/owl.carousel.min.js'
