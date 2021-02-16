@@ -39,6 +39,9 @@ import TopSomething from "@/components/TopSomething.vue";
 
 export default {
   name: "index",
+  head: {
+    title: 'Главная | ElectroStore'
+  },
   components: {
     MainSlider,
     LatestProduct,

@@ -65,6 +65,11 @@ export default {
       (category) => category.slug === params.slug
     );
   },
+  head(){
+    return {
+      title: `${this.products.results[0].category} | ElectroStore`
+    }
+  },
   async asyncData({ $axios, params, route }) {
     let page = parseInt(route.query.page);
     if (!page) page = 1;

@@ -330,7 +330,6 @@
                           class="button alt"
                         />
                       </div>
-                      <script type="text/javascript" src="https://auth.robokassa.ru/Merchant/PaymentForm/FormSS.js?MerchantLogin=electrostore&InvoiceID=0&Culture=ru&Encoding=utf-8&OutSum=0,00&SignatureValue=e022c5e1f11fe96474a55306065f2bf9"></script>
                       <div class="clear"></div>
                     </div>
                   </div>
@@ -350,6 +349,9 @@ export default {
     return {
       products: this.$store.state.localStorage.cart,
     };
+  },
+  head: {
+    title: 'Оформление заказа | ElectroStore'
   },
   computed: {
     totalPrice() {

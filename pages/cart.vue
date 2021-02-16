@@ -155,7 +155,7 @@
 <script>
 export default {
   head: {
-    title: "Корзина",
+    title: 'Корзина | ElectroStore',
   },
   data() {
     return {

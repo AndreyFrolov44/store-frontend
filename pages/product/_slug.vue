@@ -254,6 +254,11 @@ export default {
       quantity: 1,
     };
   },
+  head() {
+    return {
+      title: `${this.product.name} | ElectroStore`
+    }
+  },
   async asyncData({ $axios, params, error }) {
     try {
       const product = await $axios.$get(`/product/${params.slug}`);
