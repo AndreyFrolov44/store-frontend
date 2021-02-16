@@ -1,1 +1,0 @@
-import '~/assets/js/jquery.easing.1.3.min.js'

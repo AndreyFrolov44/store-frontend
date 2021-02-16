@@ -13,12 +13,12 @@ export const mutations = {
                 found.quantity++
                 found.totalPrice = found.quantity * found.price
             } else {
-                state.cart.push({ id: item.id, slug: item.slug, name: item.name, price: price, image: item.image, quantity: quantity, totalPrice: item.price * quantity })
+                state.cart.push({ id: item.id, slug: item.slug, name: item.name, price: price, image: item.image, quantity: parseInt(quantity), totalPrice: price * quantity })
             }
         }
     },
     updateQuantity(state, { item, quantity }) {
-        if(quantity > 0) {
+        if(item.quantity > 0) {
             let found = state.cart.find(product => product.id == item.id)
             found.quantity += quantity
             found.totalPrice = found.quantity * found.price

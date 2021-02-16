@@ -4,14 +4,14 @@
       <div class="row">
         <div class="col-sm-4 col-xs-12">
           <div class="footer-about-us">
-            <h2>u<span>Stora</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Perferendis sunt id doloribus vero quam laborum quas alias dolores
-              blanditiis iusto consequatur, modi aliquid eveniet eligendi iure
-              eaque ipsam iste, pariatur omnis sint! Suscipit, debitis,
-              quisquam. Laborum commodi veritatis magni at?
+              В нашем магазине вы можете произвести оплату в WebMoney Transfer со своего электронного кошелька. Мы начинаем работу по доставке вашего товара сразу после того, как товар будет оплачен.
             </p>
+            <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=333243249167" target=_blank>
+              <img src="@/assets/img/135_wm_merchant.png" title="Здесь находится аттестат нашего WM идентификатора " border="0">
+              <br>
+              <font size=1>Проверить аттестат</font>
+            </a> 
           </div>
         </div>
 
@@ -20,10 +20,7 @@
             <h2 class="footer-wid-title">Навигация пользователя</h2>
             <ul>
               <li>
-                <a href="#">Избранное</a>
-              </li>
-              <li>
-                <a href="cart.html">Корзина</a>
+                <nuxt-link to="/cart">Корзина</nuxt-link>
               </li>
             </ul>
           </div>
@@ -51,7 +48,7 @@ import { mapState } from "vuex";
 export default {
   name: "Footer",
   computed: {
-    ...mapState(['categories'])
-  }
+    ...mapState(["categories"]),
+  },
 };
 </script>

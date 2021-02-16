@@ -1,5 +1,9 @@
 const webpack = require('webpack')
 export default {
+  server: {
+    host: '0.0.0.0'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'frontend-nuxt',
@@ -50,11 +54,19 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-vuex-localstorage',
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '72471112',
+        webvisor: true,
+        clickmap:true,
+      }
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'http://localhost:8000/api', // Used as fallback if no runtime config is provided
+    baseURL: 'http://electrostore-api.ru/api', // Used as fallback if no runtime config is provided
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -89,15 +89,18 @@ z-index: 999;}
     color: #999;
 }
 .logo h1 a:hover {text-decoration: none;opacity: .7}
-.logo h1 a span {
-    color: #5a88ca;
-}
 .shopping-item {
     border: 1px solid #ddd;
     float: right;
     font-size: 18px;
     margin-top: 40px;
     position: relative;
+}
+.logo-c1 {
+    color: #74c7b8;
+}
+.logo-c2 {
+    color: #51c2d5;
 }
 .shopping-item a {
     color: #666;

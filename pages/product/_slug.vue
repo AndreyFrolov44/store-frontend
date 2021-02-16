@@ -82,7 +82,7 @@
                           size="4"
                           v-model="quantity"
                           class="input-text qty text"
-                          title="Qty"
+                          onkeypress="return event.charCode >= 48"
                           value="1"
                           name="quantity"
                           min="1"
@@ -161,18 +161,6 @@
                     <div class="product-f-image">
                       <img :src="related.image" :alt="related.name" />
                       <div class="product-hover">
-                        <!-- <a
-                          href=""
-                          @click.prevent="
-                            $store.commit('localStorage/addToCart', {
-                              item: related,
-                              quantity: 1,
-                            })
-                          "
-                          class="add-to-cart-link"
-                          ><i class="fa fa-shopping-cart"></i> Добавить в
-                          корзину</a
-                        > -->
                         <a
                           v-if="
                             !$store.state.localStorage.cart.find(
